@@ -245,8 +245,7 @@ class ParallelTransformer_GCN(nn.Module):
         self.lambda_init = nn.Parameter(torch.tensor(0.5)).cuda()
 
         # 动态阈值参数
-        self.tau_0 = 0
-        self.k = 0.05
+        self.k = 0
 
         # GCN融合模块
         self.gcn1 = GCNConv(64, 128)
